@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodie Hub | Premium Wear</title>
+    <style>
+        /* Design Settings */
+        :root {
+            --black: #121212;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+            --accent: #ff4757;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--white); }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; padding: 15px 20px; background: var(--black); color: white; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 1px; }
+
+        /* Hero Banner */
+        .hero { background: var(--gray); padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin: 0; color: var(--black); }
+        .hero p { color: #666; margin: 10px 0 20px; }
+        
+        /* Main Button */
+        .shop-btn { background: var(--black); color: white; padding: 12px 30px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: 0.3s; text-decoration: none; }
+        .shop-btn:active { transform: scale(0.95); background: var(--accent); }
+
+        /* Product Section */
+        .product-container { padding: 30px 20px; display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; text-align: center; padding-bottom: 15px; }
+        .card img { width: 100%; height: 350px; object-fit: cover; background: #eee; }
+        .card h3 { margin: 15px 0 5px; }
+        .card .price { color: var(--accent); font-weight: bold; margin-bottom: 15px; }
+
+        /* Footer */
+        footer { background: var(--black); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">HOODIE HUB</div>
+        <div id="cart-count">Cart (0)</div>
+    </nav>
+
+    <header class="hero">
+        <h1>New Winter Arrival</h1>
+        <p>Premium quality hoodies for you.</p>
+        <button class="shop-btn" onclick="scrollToProducts()">Shop Now</button>
+    </header>
+
+    <div class="product-container" id="products">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500" alt="Black Hoodie">
+            <h3>Midnight Black Hoodie</h3>
+            <p class="price">₹1,299</p>
+            <button class="shop-btn" onclick="addToCart('Black Hoodie')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=500" alt="Grey Hoodie">
+            <h3>Classic Grey Fleece</h3>
+            <p class="price">₹1,199</p>
+            <button class="shop-btn" onclick="addToCart('Grey Hoodie')">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hoodie Hub Store</p>
+    </footer>
+
+    <script>
+        let count = 0;
+
+        // Button Click Function
+        function addToCart(name) {
+            count++;
+            document.getElementById('cart-count').innerText = "Cart (" + count + ")";
+            alert(name + " aapke cart mein add ho gaya hai! ✅");
+        }
+
+        // Scroll Function
+        function scrollToProducts() {
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
+DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodie Hub | Premium Wear</title>
+    <style>
+        /* Design Settings */
+        :root {
+            --black: #121212;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+            --accent: #ff4757;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--white); }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; padding: 15px 20px; background: var(--black); color: white; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 1px; }
+
+        /* Hero Banner */
+        .hero { background: var(--gray); padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin: 0; color: var(--black); }
+        .hero p { color: #666; margin: 10px 0 20px; }
+        
+        /* Main Button */
+        .shop-btn { background: var(--black); color: white; padding: 12px 30px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: 0.3s; text-decoration: none; }
+        .shop-btn:active { transform: scale(0.95); background: var(--accent); }
+
+        /* Product Section */
+        .product-container { padding: 30px 20px; display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; text-align: center; padding-bottom: 15px; }
+        .card img { width: 100%; height: 350px; object-fit: cover; background: #eee; }
+        .card h3 { margin: 15px 0 5px; }
+        .card .price { color: var(--accent); font-weight: bold; margin-bottom: 15px; }
+
+        /* Footer */
+        footer { background: var(--black); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">HOODIE HUB</div>
+        <div id="cart-count">Cart (0)</div>
+    </nav>
+
+    <header class="hero">
+        <h1>New Winter Arrival</h1>
+        <p>Premium quality hoodies for you.</p>
+        <button class="shop-btn" onclick="scrollToProducts()">Shop Now</button>
+    </header>
+
+    <div class="product-container" id="products">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500" alt="Black Hoodie">
+            <h3>Midnight Black Hoodie</h3>
+            <p class="price">₹1,299</p>
+            <button class="shop-btn" onclick="addToCart('Black Hoodie')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=500" alt="Grey Hoodie">
+            <h3>Classic Grey Fleece</h3>
+            <p class="price">₹1,199</p>
+            <button class="shop-btn" onclick="addToCart('Grey Hoodie')">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hoodie Hub Store</p>
+    </footer>
+
+    <script>
+        let count = 0;
+
+        // Button Click Function
+        function addToCart(name) {
+            count++;
+            document.getElementById('cart-count').innerText = "Cart (" + count + ")";
+            alert(name + " aapke cart mein add ho gaya hai! ✅");
+        }
+
+        // Scroll Function
+        function scrollToProducts() {
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
